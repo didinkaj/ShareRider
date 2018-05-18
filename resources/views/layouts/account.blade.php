@@ -42,7 +42,7 @@
 		<header id="header">
 
 			<div id="logo-group">
-				<span id="logo"> <img src="{{ asset('img/logo.png') }}" alt="ShareRide Cyton Coding Challenge" > </span>
+				<span id="logo"> <img src="{{ asset('img/logo.png') }}" alt="ShareRide " > </span>
 			</div>
 			
 			@yield('title')
@@ -59,7 +59,7 @@
 
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm">
-						<h1 class="txt-color-red login-header-big">ShareRide</h1>
+						<h1 class="txt-color-red login-header-big">ShareRide Cyton Coding Challenge</h1>
 						<div class="hero">
 
 							<div class="pull-left login-desc-box-l">
