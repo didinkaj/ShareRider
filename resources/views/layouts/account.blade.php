@@ -11,8 +11,8 @@
 		<!-- #CSS Links -->
 		<!-- Basic Styles -->
 		<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/bootstrap.min.css') }}">
-		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/font-awesome.min.css') }}">
+		<!-- <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/font-awesome.min.css') }}"> -->
 
 		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/smartadmin-production-plugins.min.css')  }}">
@@ -60,7 +60,7 @@
 			<div id="content" class="container">
 
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm">
+					<div class="col-md-7 col-lg-8 hidden-sm-down ">
 						<div class="row">
 						<h1 class="txt-color-red login-header-big">ShareRide Cyton Coding Challenge</h1>
 						<div class="hero">
@@ -94,7 +94,7 @@
 						</div>
 
 					</div>
-					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+					<div class="col-12 col-md-5 col-lg-4">
 						<div class="well no-padding">
 
 							@yield('content')
@@ -103,14 +103,14 @@
 
 						<h5 class="text-center"> - Or sign in using -</h5>
 
-						<ul class="list-inline text-center">
-							<li>
+						<ul class="list-inline text-center ">
+							<li class="list-inline-item">
 								<a href="javascript:void(0);" class="btn btn-primary btn-circle"><i class="fa fa-facebook"></i></a>
 							</li>
-							<li>
+							<li class="list-inline-item">
 								<a href="javascript:void(0);" class="btn btn-info btn-circle"><i class="fa fa-twitter"></i></a>
 							</li>
-							<li>
+							<li class="list-inline-item">
 								<a href="javascript:void(0);" class="btn btn-warning btn-circle"><i class="fa fa-linkedin"></i></a>
 							</li>
 						</ul>
