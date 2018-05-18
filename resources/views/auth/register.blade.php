@@ -17,7 +17,7 @@
 			
 		
 		<section>
-			<label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+			<label for="name" >{{ __('Name') }}</label>
 			<label class="input"> <i class="icon-append fa fa-user"></i>
 				<input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
@@ -30,7 +30,7 @@
 		</section>
 
 		<section>
-			<label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+			<label for="email" >{{ __('E-Mail Address') }}</label>
 			<label class="input"> <i class="icon-append fa fa-envelope"></i>
 				<input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
@@ -43,7 +43,7 @@
 		</section>
 
 		<section>
-			<label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+			<label for="password" >{{ __('Password') }}</label>
 			<label class="input"> <i class="icon-append fa fa-lock"></i>
 				 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
@@ -56,7 +56,7 @@
 		</section>
 
 		<section>
-			<label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+			<label for="password-confirm" >{{ __('Confirm Password') }}</label>
 			<label class="input"> <i class="icon-append fa fa-lock"></i>
 				<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
 				<b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>

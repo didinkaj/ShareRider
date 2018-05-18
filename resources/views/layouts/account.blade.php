@@ -10,6 +10,7 @@
 
 		<!-- #CSS Links -->
 		<!-- Basic Styles -->
+		<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/bootstrap.min.css') }}">
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/font-awesome.min.css') }}">
 
@@ -35,6 +36,7 @@
 		<!-- #GOOGLE FONT -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
 
+		
 	</head>
 
 	<body class="animated fadeInDown">
@@ -59,6 +61,7 @@
 
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm">
+						<div class="row">
 						<h1 class="txt-color-red login-header-big">ShareRide Cyton Coding Challenge</h1>
 						<div class="hero">
 
@@ -72,6 +75,7 @@
 
 							<img src="img/demo/iphoneview.png" class="pull-right display-image" alt="" style="width:210px">
 
+						</div>
 						</div>
 
 						<div class="row">
