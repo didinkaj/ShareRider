@@ -2,7 +2,7 @@
 
 @section('title')
 
-<span id="extr-page-header-space"> <span class="hidden-mobile hidden-xs">Need an account?</span> <a href="{{ route('register') }}" class="btn btn-danger">Create account</a> </span>
+<span id="extr-page-header-space"> <span class="hidden-xs-down">Need an account?</span> <a href="{{ route('register') }}" class="btn btn-danger">Create account</a> </span>
 
 @endsection
 

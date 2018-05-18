@@ -1,5 +1,11 @@
 @extends('layouts.account')
 
+@section('title')
+
+<span id="extr-page-header-space"> <span class="hidden-xs-down">Need an account?</span> <a href="{{ route('register') }}" class="btn btn-danger">Create account</a> </span>
+
+@endsection
+
 @section('content')
 
 <form method="POST" action="{{ route('password.request') }}" class="smart-form client-form">

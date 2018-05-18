@@ -1,7 +1,7 @@
 @extends('layouts.account')
 
 @section('title')
-<span id="extr-page-header-space"> <span class="hidden-mobile hidden-xs">Already registered?</span> <a href="{{ route('login') }}" class="btn btn-danger">Sign In</a> </span>
+<span id="extr-page-header-space"> <span class="hidden-xs-down">Already registered?</span> <a href="{{ route('login') }}" class="btn btn-danger">Sign In</a> </span>
 @endsection
 
 @section('content')

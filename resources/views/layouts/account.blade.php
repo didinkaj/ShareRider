@@ -60,8 +60,9 @@
 			<div id="content" class="container">
 
 				<div class="row">
-					<div class="col-md-7 col-lg-8 hidden-sm-down ">
+					<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm ">
 						<div class="row">
+						<div class="col-xs-12 col-sm-12 hidden-sm-down">
 						<h1 class="txt-color-red login-header-big">ShareRide Cyton Coding Challenge</h1>
 						<div class="hero">
 
@@ -75,6 +76,7 @@
 
 							<img src="img/demo/iphoneview.png" class="pull-right display-image" alt="" style="width:210px">
 
+						</div>
 						</div>
 						</div>
 
@@ -94,7 +96,7 @@
 						</div>
 
 					</div>
-					<div class="col-12 col-md-5 col-lg-4">
+					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
 						<div class="well no-padding">
 
 							@yield('content')
