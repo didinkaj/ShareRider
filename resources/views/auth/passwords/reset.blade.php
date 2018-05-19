@@ -58,10 +58,14 @@
 </section>
 
 <section>
+	
+	<footer>
+		<button type="submit" class="btn btn-primary">
+			<i class="fa fa-refresh"></i> {{ __('Reset Password') }}
+		</button>
+	</footer>
    
-        <button type="submit" class="btn btn-primary">
-        {{ __('Reset Password') }}
-    </button>
+     
 </section>
 </fieldset>
 </form>
