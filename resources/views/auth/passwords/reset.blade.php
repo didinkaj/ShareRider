@@ -32,7 +32,7 @@
                 <strong>{{ $errors->first('email') }}</strong>
             </span>
         @endif
-    </div>
+  
 </section>
 
 <section>
