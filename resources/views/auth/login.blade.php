@@ -46,8 +46,8 @@
 
 		<section>
 			<label class="checkbox">
-				<input type="checkbox" name="remember" checked="">
-				<i></i>Stay signed in</label>
+				<input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> 
+				<i></i>{{ __('Remember Me') }}</label>
 		</section>
 	</fieldset>
 	<footer>
