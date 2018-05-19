@@ -9,13 +9,13 @@
 @section('content')
 
 <form method="POST" action="{{ route('password.request') }}" class="smart-form client-form">
-<fieldset>
+@csrf
 	<header>
 		{{ __('Reset Password') }}
 	</header>
 	
-    @csrf
     
+    <fieldset>
 
 <section>
 
