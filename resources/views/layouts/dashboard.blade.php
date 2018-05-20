@@ -58,7 +58,7 @@
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-		<nav class="site-navbar navbar navbar-default navbar-inverse navbar-fixed-top navbar-mega"
+		<nav class="site-navbar navbar navbar-default  navbar-fixed-top navbar-mega bg-blue-600"
 		role="navigation">
 
 			<div class="navbar-header">
@@ -73,7 +73,7 @@
 				</button>
 				<div class="navbar-brand navbar-brand-center">
 					<img class="navbar-brand-logo" src="../assets/images/logo.png" title="Remark">
-					<span class="navbar-brand-text hidden-xs-down"> Remark</span>
+					<span class="navbar-brand-text hidden-xs-down"> Rider</span>
 				</div>
 				<button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
 				data-toggle="collapse">
