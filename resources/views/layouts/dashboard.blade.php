@@ -202,11 +202,11 @@
 
 		<!-- Page -->
 		<div class="page">
-			<div class="page-content">
+			<!-- <div class="page-content"> -->
 
 				@yield('content')
 
-			</div>
+			<!-- </div> -->
 		</div>
 		<!-- End Page -->
 
