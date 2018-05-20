@@ -20,8 +20,8 @@
 		<link rel="stylesheet" href="{{ asset('assets/css/site.minfd53.css?v4.0.1') }}">
 
 		<!-- Skin tools (demo site only) -->
-		<link rel="stylesheet" href="{{ asset('global/css/skintools.minfd53.css?v4.0.1') }}">
-		<script src="{{ asset('assets/js/Plugin/skintools.minfd53.js?v4.0.1') }}"></script>
+		<!-- <link rel="stylesheet" href="{{ asset('global/css/skintools.minfd53.css?v4.0.1') }}">
+		<script src="{{ asset('assets/js/Plugin/skintools.minfd53.js?v4.0.1') }}"></script> -->
 
 		<!-- Plugins -->
 		<link rel="stylesheet" href="{{ asset('global/vendor/animsition/animsition.minfd53.css?v4.0.1') }}">
@@ -250,7 +250,7 @@
 		<script src="{{ asset('global/js/config/colors.minfd53.js?v4.0.1') }}"></script>
 		<script src="{{ asset('assets/js/config/tour.minfd53.js?v4.0.1') }}"></script>
 		<script>
-			Config.set('assets', '../assets');
+			Config.set('assets', '{{ asset("assets") }}');
 		</script>
 
 		<!-- Page -->
