@@ -44,7 +44,7 @@
 		<header id="header">
 
 			<div id="logo-group">
-				<span id="logo"> <i class="icon-append fa fa-taxi"></i>ShareRide<!-- <img src="{{ asset('img/logo.png') }}" alt="ShareRide " >  --></span>
+				<span id="logo"> <i class="icon-append fa fa-taxi"></i> ShareRide<!-- <img src="{{ asset('img/logo.png') }}" alt="ShareRide " >  --></span>
 			</div>
 			
 			@yield('title')
