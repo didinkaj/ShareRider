@@ -36,6 +36,9 @@
 		<link rel="stylesheet" href="{{ asset('global/fonts/material-design/material-design.minfd53.css?v4.0.1') }}">
 		<link rel="stylesheet" href="{{ asset('global/fonts/brand-icons/brand-icons.minfd53.css?v4.0.1') }}">
 		<link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,700">
+		
+		
+  		<link rel="stylesheet" href="{{ asset('global/fonts/font-awesome/font-awesome.minfd53.css?v4.0.1') }}">
 
 		<!--[if lt IE 9]>
 		<script src="{{ asset('global/vendor/html5shiv/html5shiv.min.js?v4.0.1') }}"></script>
@@ -72,7 +75,7 @@
 					<i class="icon md-more" aria-hidden="true"></i>
 				</button>
 				<div class="navbar-brand navbar-brand-center">
-					<img class="navbar-brand-logo" src="../assets/images/logo.png" title="Remark">
+					<i class="icon fa-taxi" aria-hidden="true"></i>
 					<span class="navbar-brand-text hidden-xs-down"> Rider</span>
 				</div>
 				<button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
