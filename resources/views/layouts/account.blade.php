@@ -14,16 +14,16 @@
 		<!-- <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/bootstrap.min.css') }}">
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/font-awesome.min.css') }}"> -->
 
-		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<!--  Styles : Caution! DO NOT change the order -->
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/smartadmin-production-plugins.min.css')  }}">
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/smartadmin-production.min.css')  }}">
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/smartadmin-skins.min.css')  }}">
 
-		<!-- SmartAdmin RTL Support -->
+		<!--  RTL Support -->
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/smartadmin-rtl.min.css')  }}">
 
-		<!-- We recommend you use "your_style.css" to override SmartAdmin
-		specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+		<!-- We recommend you use "your_style.css" to override 
+		specific styles this will also ensure you retrain your customization with each  update.
 		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
 
 		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
@@ -44,7 +44,7 @@
 		<header id="header">
 
 			<div id="logo-group">
-				<span id="logo"> <img src="{{ asset('img/logo.png') }}" alt="ShareRide " > </span>
+				<span id="logo"> <i class="icon-append fa fa-taxi"></i>ShareRide<!-- <img src="{{ asset('img/logo.png') }}" alt="ShareRide " >  --></span>
 			</div>
 			
 			@yield('title')

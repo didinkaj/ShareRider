@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html class="no-js css-menubar" lang="en">
 
-	<!-- Mirrored from getbootstrapadmin.com/remark/material/iconbar/pages/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 20 May 2018 01:19:48 GMT -->
+	
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-		<meta name="description" content="bootstrap material admin template">
+		<meta name="rider" content="give and get rides">
 		<meta name="author" content="">
 
-		<title>{{ config('app.name', 'Rider') }}</title>
+		<title>ShareRide</title>
 
-		<link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png') }}">
-		<link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+		<!-- <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png') }}">
+		<link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}"> -->
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="{{ asset('global/css/bootstrap.minfd53.css?v4.0.1') }}">
@@ -274,5 +274,5 @@
 
 	</body>
 
-	<!-- Mirrored from getbootstrapadmin.com/remark/material/iconbar/pages/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 20 May 2018 01:19:48 GMT -->
+	
 </html>
