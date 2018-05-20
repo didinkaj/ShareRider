@@ -15,6 +15,7 @@
 		<link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}"> -->
 
 		<!-- Stylesheets -->
+		<!-- <link rel="stylesheet" href="{{ asset('css/all.css') }}"> -->
 		<link rel="stylesheet" href="{{ asset('global/css/bootstrap.minfd53.css?v4.0.1') }}">
 		<link rel="stylesheet" href="{{ asset('global/css/bootstrap-extend.minfd53.css?v4.0.1') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/site.minfd53.css?v4.0.1') }}">
