@@ -51,6 +51,7 @@
 		<script>
 			Breakpoints();
 		</script>
+		<link id="skinStyle" href="{{ asset('assets/skins/red.css') }}" rel="stylesheet" type="text/css">
 	</head>
 	<body class="animsition ">
 		<!--[if lt IE 8]>
