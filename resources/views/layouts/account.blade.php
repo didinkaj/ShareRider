@@ -11,8 +11,6 @@
 		<!-- #CSS Links -->
 		<!-- Basic Styles -->
 		<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-		<!-- <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/bootstrap.min.css') }}">
-		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/font-awesome.min.css') }}"> -->
 
 		<!--  Styles : Caution! DO NOT change the order -->
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/smartadmin-production-plugins.min.css')  }}">
@@ -22,11 +20,6 @@
 		<!--  RTL Support -->
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/smartadmin-rtl.min.css')  }}">
 
-		<!-- We recommend you use "your_style.css" to override 
-		specific styles this will also ensure you retrain your customization with each  update.
-		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
-
-		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/demo.min.css') }}">
 
 		<!-- #FAVICONS -->
