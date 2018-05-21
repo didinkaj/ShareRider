@@ -8,9 +8,10 @@
 	<div class="panel">
 		
 		<div class="panel-heading">
-			<h3 class="panel-title">Edit Ride
-			
-			<span class="float-right"> {{$rideId->created_at->diffForHumans()}}</span>
+			<h3 class="panel-title">
+				Booking Ride
+				
+				<span class="float-right"> {{$rideId->created_at->diffForHumans()}}</span>
 			</h3>
 		</div>
 		<div class="panel-body">
@@ -29,25 +30,35 @@
 		@endif
 
 				<div class="card-body">
-					<form autocomplete="off" method="post" action="{{url('/edit/ride/'.$rideId->id)}}">
+					<form autocomplete="off" method="post" action="{{url('/confirm/bookride/'.$rideId->id)}}">
 						@csrf
-						{!! method_field('patch') !!}
+				
 						<div class="form-group form-material floating" data-plugin="formMaterial">
-							<input class="form-control " name="origin" value="{{$rideId->origin}}" required="required" type="text">
+							<input readonly="readonly" class="form-control " name="origin" value="{{$rideId->origin}}" required="required" type="text">
 							<label class="floating-label">Origin</label>
 						</div>
 						<div class="form-group form-material floating" data-plugin="formMaterial">
-							<input class="form-control " value="{{$rideId->destination}}"  name="destination" required="required" type="text">
+							<input readonly="readonly" class="form-control " value="{{$rideId->destination}}"  name="destination" required="required" type="text">
 							<label class="floating-label">Destination</label>
 						</div>
 						<div class="form-group form-material floating" data-plugin="formMaterial">
-							<input class="form-control "  value="{{$rideId->space_available}}" name="capacity" required="required" type="number">
+							<input readonly="readonly" class="form-control "  value="{{$rideId->space_available}}" name="capacity" required="required" type="number">
 							<label class="floating-label">Capacity</label>
+						</div>
+						<div class="form-group form-material floating" data-plugin="formMaterial">
+							<input readonly="readonly" class="form-control "  value="{{$rideId->driver}}" name="driver" required="required" type="text">
+							<label class="floating-label">Driver</label>
+						</div>
+						<div class="form-group form-material floating" data-plugin="formMaterial">
+							<input readonly="readonly" class="form-control "  value="{{$rideId->user_id}}" name="driverid" required="required" type="text">
+							<label class="floating-label">Driver ID</label>
+							<input readonly="readonly" class="form-control "  value="{{$rideId->user_email}}" name="driveremail" required="required" type="hidden">
+							<input readonly="readonly" class="form-control "  value="{{$rideId->id}}" name="rideid" required="required" type="hidden">
 						</div>
 
 						<div class="float-right">
 							<button  class="btn-success btn waves-effect waves-classic" type="submit" >
-								Edit Ride
+								Book Ride
 							</button>
 
 						</div>

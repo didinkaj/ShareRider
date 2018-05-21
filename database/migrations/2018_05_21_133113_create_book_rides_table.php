@@ -22,6 +22,9 @@ class CreateBookRidesTable extends Migration
 			$table->integer('driver_id');
 			$table->string('driver_name');
 			$table->string('driver_email');
+			$table->string('origin');
+			$table->string('destination');
+			$table->integer('space_available');
             $table->timestamps();
         });
     }

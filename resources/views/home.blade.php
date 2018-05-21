@@ -34,9 +34,6 @@
 
 						<br />
 
-						<p>
-
-						</p>
 						<ul class="list-group list-group-dividered list-group-full">
 							@foreach($allRides as $ride)
 							<li class="list-group-item">
@@ -56,9 +53,12 @@
 										</div>
 									</div>
 									<div class="pl-20">
-										<button type="button" class="btn btn-block btn-primary waves-effect waves-classic">
+										<form autocomplete="off" method="post" action="{{url('/book/ride/'.$ride->id)}}">
+										@csrf
+										<button type="submit" class="btn btn-block btn-primary waves-effect waves-classic">
 											Book
 										</button>
+										</form>
 									</div>
 								</div>
 								<br />

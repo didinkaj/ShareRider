@@ -4,6 +4,10 @@ namespace Rider\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Rider\BookRides;
+
+use Auth;
+
 class RideHistoryController extends Controller
 {
     /**
@@ -14,7 +18,11 @@ class RideHistoryController extends Controller
     public function index()
     {
         //
-        return view('ridehistory');
+        $allhisto = BookRides::latest()
+					 ->where('user_id',Auth::user()->id)
+					 -> orderBy('created_at', 'desc')
+					 -> get();
+        return view('ridehistory',compact('allhisto'));
     }
 
     /**

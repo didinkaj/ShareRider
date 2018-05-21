@@ -98,6 +98,7 @@ class RidesController extends Controller
         //
         $rideId = Rides::where('id',$id)
 					->where('user_id',Auth::user()->id)
+					->where('bookedstatus','0')
         			->first();
 		return view('editride',compact('rideId'));
     }
@@ -113,6 +114,7 @@ class RidesController extends Controller
         //
         $rideId = Rides::where('id',$id)
 					->where('user_id',Auth::user()->id)
+					->where('bookedstatus','0')
         			->first();
 		return view('editride',compact('rideId'));
     }
@@ -141,6 +143,7 @@ class RidesController extends Controller
         }else{ 	
         	$save =	Rides::where('id',$id)
 							->where('user_id',Auth::user()->id)
+							->where('bookedstatus','0')
 			        		->update([
 									'origin' => $request->input(['origin']),
 			        				'destination' => $request->input(['destination']),
