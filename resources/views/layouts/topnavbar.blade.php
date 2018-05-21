@@ -63,7 +63,7 @@
 				</li>
 				@else
 				<li class="nav-item dropdown">
-					<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> {{ Auth::user()->name }} <span class="caret"></span> </a>
+					<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" data-animation="scale-up" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> {{ Auth::user()->name }} <span class="caret"></span> </a>
 
 					<div class="dropdown-menu" role="menu">
 						<a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon md-account" aria-hidden="true"></i> Profile</a>
@@ -80,6 +80,9 @@
 					</div>
 				</li>
 				@endguest
+				<li>
+					<span style="margin-left: 8px;"></span>
+				</li>
 
 			</ul>
 			<!-- End Navbar Toolbar Right -->

@@ -9,10 +9,12 @@
 		<meta name="rider" content="give and get rides">
 		<meta name="author" content="">
 
-		<title>ShareRide</title>
+		<title>ShareRide @yield('title')</title>
 
 		<!-- <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png') }}">
 		<link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}"> -->
+		
+		
 
 		<!-- Stylesheets -->
 		<!-- <link rel="stylesheet" href="{{ asset('css/all.css') }}"> -->
@@ -67,7 +69,10 @@
 		@include('layouts.topnavbar')
 		
 		<!-- navigation -->
-		@include('layouts.navigation')
+		 @section('sidebar')
+            @include('layouts.navigation')
+        @show
+		
 
 		<!-- Page -->
 		<div class="page">
@@ -81,6 +86,7 @@
 
 		<!-- Footer -->
 		@include('layouts.footer')
+		
 		<!-- Core  -->
 		<script src="{{ asset('global/vendor/babel-external-helpers/babel-external-helpersfd53.js?v4.0.1') }}"></script>
 		<script src="{{ asset('global/vendor/jquery/jquery.minfd53.js?v4.0.1') }}"></script>
@@ -136,6 +142,7 @@
 				});
 			})(document, window, jQuery);
 		</script>
+		
 
 	</body>
 
