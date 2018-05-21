@@ -77,7 +77,8 @@ class RidesController extends Controller
         				 'origin' => $request->input(['origin']),
         				 'destination' => $request->input(['destination']),
         				 'space_available' => $request->input(['capacity']),
-        				 'driver'=>Auth::user()->name
+        				 'driver'=>Auth::user()->name,
+        				 'bookedstatus'=>'0',
         				]);
 			// redirect
 			if($save){

@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/homeajax', 'HomeController@indexajax')->name('homeajax');
 Route::post('/book/ride/{id}','HomeController@bookRide')->where('id', '[0-9]+');
 Route::get('/book/ride/{id}','HomeController@bookRideShow')->where('id', '[0-9]+');
 Route::post('/add/ride', 'RidesController@store');

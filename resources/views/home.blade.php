@@ -34,7 +34,7 @@
 
 						<br />
 
-						<ul class="list-group list-group-dividered list-group-full">
+						<ul class="list-group list-group-dividered list-group-full" id="load-data">
 							@foreach($allRides as $ride)
 							<li class="list-group-item">
 								<div class="media">
@@ -66,10 +66,12 @@
 							@endforeach						
 						
 						</ul>
-						<button type="button" class="btn btn-block btn-primary waves-effect waves-classic">
+						<div id="remove-row">
+						<button id="btn-more" data-id="{{ $ride->id }}" type="button" class="btn btn-block btn-primary waves-effect waves-classic">
 							<i class="icon md-chevron-down mr-5" aria-hidden="true"></i>Show
 							More
 						</button>
+						</div>
 
 					</div>
 
@@ -100,7 +102,7 @@
 							<label class="floating-label">Capacity</label>
 						</div>
 
-						<div class="float-right">
+						<div class="float-right" >
 							<button  class="btn-success btn waves-effect waves-classic" type="submit" >
 								Add Ride
 							</button>
@@ -110,7 +112,7 @@
 					</form>
 				</div>
 				<div class="card-block">
-					<h4 class="card-title "> My Rides </h4>
+					<h4 class="card-title "> My Ride </h4>
 					<hr />
 
 					<ul class="list-group list-group-dividered list-group-full">
@@ -171,4 +173,30 @@
 @section('scripts')
 <script src="{{ asset('global/js/Plugin/jquery-placeholder.minfd53.js?v4.0.1') }}"></script>
 <script src="{{ asset('global/js/Plugin/material.minfd53.js?v4.0.1') }}"></script>
+<script>
+$(document).ready(function(){
+   $(document).on('click','#btn-more',function(){
+       var id = $(this).data('id');
+       $("#btn-more").html("Loading....");
+       $.ajax({
+           url : '{{ url("/homeajax") }}',
+           method : "POST",
+           data : {id:id, _token:"{{csrf_token()}}"},
+           dataType : "text",
+           success : function (data)
+           {
+              if(data != '') 
+              {
+                  $('#remove-row').remove();
+                  $('#load-data').append(data);
+              }
+              else
+              {
+                  $('#btn-more').html("No Data");
+              }
+           }
+       });
+   });  
+}); 
+</script>
 @endsection

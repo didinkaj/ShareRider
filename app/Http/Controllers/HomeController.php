@@ -38,6 +38,7 @@ class HomeController extends Controller
     	$allRides =  Rides::latest()
 					 ->where('user_id','!=',Auth::user()->id)
 					 ->where('bookedstatus','0')
+					 ->limit(2)
 					 -> orderBy('created_at', 'desc')
 					 -> get();
 					 
@@ -49,6 +50,67 @@ class HomeController extends Controller
 				   -> get();
 				   
 		return view('home',compact('allRides','myRides'));
+    }
+	
+	 public function indexajax(Request $request)
+    {
+    	$output = "";
+    	$id = $request->id;
+    	$allRides =  Rides::latest()
+					 ->where('user_id','!=',Auth::user()->id)
+					 ->where('id','<',$id)
+					 ->where('bookedstatus','0')
+					 ->orderBy('created_at', 'desc')
+					 ->limit(2)
+					 ->get();
+					 
+					
+					 
+					 if(!$allRides->isEmpty())
+				        {
+				            foreach($allRides as $ride)
+				            {
+				            	$output .= '<li class="list-group-item">
+								<div class="media">
+									<div class="pr-20">
+										<i class="icon fa-taxi" style="color: #dc3545;" aria-hidden="true"></i>
+
+									</div>
+									<div class="media-body">
+										<small class="text-muted float-right">'.$ride->created_at->diffForHumans().'</small>
+										<h5 class="mt-0 mb-5">'.$ride->driver.'</h5>
+										<div>
+											<b>Origin</b> : '.ucfirst($ride->origin).' <br/>
+											<b>Destination</b> : '.ucfirst($ride->destination).'<br/>
+											<b>Capacity</b> : '.$ride->space_available.'<br />
+											<b>Email</b> : '.ucfirst($ride->user_email).' 
+										</div>
+									</div>
+									<div class="pl-20">
+										<form autocomplete="off" method="post" action="/book/ride/'.$ride->id.'">										
+										<input type="hidden" name="_token" value="'.csrf_token().'">
+										<button type="submit" class="btn btn-block btn-primary waves-effect waves-classic">
+											Book
+										</button>
+										</form>
+									</div>
+								</div>
+								<br />
+							</li>';
+							}
+					 $output .= '<div id="remove-row">
+								<button id="btn-more" data-id="'.$ride->id.'" type="button" class="btn btn-block btn-primary waves-effect waves-classic">
+									<i class="icon md-chevron-down mr-5" aria-hidden="true"></i>Show
+									More
+								</button>
+								</div>';
+						
+						echo $output;
+						}
+					 
+		
+				   
+		
     }
 	
 	
@@ -88,7 +150,7 @@ class HomeController extends Controller
         }else{
         	$save = BookRides::updateOrCreate([
         				'ride_id' => $request->input(['rideid']), 
-        				'driver_id'=> $request->input(['driverid']),
+        				'driver_id'=> $request->input(['driverid']),        				
         				],
         	
         				[ 
@@ -101,15 +163,15 @@ class HomeController extends Controller
         				 'driver_email'=> $request->input(['driveremail']),						  	
         				 'origin' => $request->input(['origin']),
         				 'destination' => $request->input(['destination']),
-        				 'space_available' => $request->input(['capacity']),
-        				  
+        				 'space_available' => $request->input(['capacity']),        				 
         				]);
 						
 			$ridestatus = Rides::where('id',$request->input(['rideid']))
 							->where('bookedstatus','0')
-							->update([
-								'bookedstatus'=>'1',
-							]);
+							->delete();
+							// ->update([
+								// 'bookedstatus'=>'1',
+							// ]);
 			// redirect
 			if($save && $ridestatus){
             session::flash('success', 'Ride Booked Successfully ');
