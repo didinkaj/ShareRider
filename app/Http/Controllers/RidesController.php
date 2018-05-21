@@ -68,7 +68,10 @@ class RidesController extends Controller
                         ->withErrors($validator)
                         ->withInput();
         }else{
-        	$save = Rides::create([        				
+        	$save = Rides::updateOrCreate([
+        				'user_id'=>Auth::user()->id,
+        				],
+        				[        				
         				 'user_id'=>Auth::user()->id,
         				 'user_email'=>Auth::user()->email,
         				 'origin' => $request->input(['origin']),
