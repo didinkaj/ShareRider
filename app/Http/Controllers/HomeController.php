@@ -4,6 +4,12 @@ namespace Rider\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Input;
+
+use Rider\Rides;
+
+use Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -23,6 +29,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+    	$allRides =  Rides::latest()
+					 ->where('user_id','!=',Auth::user()->id)
+					 ->where('bookedstatus','0')
+					 -> orderBy('created_at', 'desc')
+					 -> get();
+					 
+		$myRides = Rides::latest()
+				   ->where('user_id',Auth::user()->id)
+				   ->where('bookedstatus','0')
+				   -> orderBy('created_at', 'desc')
+				   ->limit(1)
+				   -> get();
+				   
+		return view('home',compact('allRides','myRides'));
     }
 }

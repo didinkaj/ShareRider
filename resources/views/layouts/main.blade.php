@@ -128,7 +128,10 @@
 		<script src="{{ asset('assets/js/Site.minfd53.js?v4.0.1') }}"></script>
 		<script src="{{ asset('global/js/Plugin/asscrollable.minfd53.js?v4.0.1') }}"></script>
 		<script src="{{ asset('global/js/Plugin/slidepanel.minfd53.js?v4.0.1') }}"></script>
-		<script src="{{ asset('global/js/Plugin/switchery.minfd53.js?v4.0.1') }}"></script>
+		<script src="{{ asset('global/js/Plugin/switchery.minfd53.js?v4.0.1') }}"></script>	
+
+
+		  
 		
 		@section('scripts')
 		@show
